@@ -2,7 +2,7 @@
 * This project aims to classify a given image as ***Cat/Dog***. The image is posted to the server via OpenAPI protocol.
 
 ## How to run
-### Wihhout Docker Image 
+### Wihout Using Docker Image 
 ```bash
 $ git clone https://github.com/FarzamTP/Flask-Swagger-Image-Classifier-API.git
 $ cd Flask-Swagger-Image-Classifier-API
@@ -13,7 +13,7 @@ $ chmod +x app.py
 $ ./app.py
 ```
 
-### Wih Docker Image 
+### Wih Using Docker Image 
 
 ```bash
 $ docker pull farzamtp/flask-swagger-cat-dog-classification-tensorflow-api:latest 
