@@ -6,3 +6,6 @@ __pycache__
 
 # Media directory
 media/*
+
+# Virtual Environemnt
+env/*
