@@ -23,7 +23,7 @@ There will be a table like below.
 
 | REPOSITORY      | TAG | IMAGE ID | CREATED | SIZE|
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| farzamtp/flask-swagger-cat-dog-classification-tensorflow-api      | latest | 2bcc97f67db1 | 31 minutes ago | 1.81GB |
+| flask-swagger-cat-dog-classification-tensorflow-api      | latest | 2bcc97f67db1 | 31 minutes ago | 1.81GB |
 
 Get the ```IMAGE ID``` and paste it below.
 ```bash
