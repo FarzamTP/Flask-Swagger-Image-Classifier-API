@@ -1,5 +1,5 @@
 # Flask-Swagger-Image-Classification-API
-* This project aims to classify a given image as ***Cat/Dog***. The image is passed to the server via OpenAPI protocol.
+* This project aims to classify a given image as ***Cat/Dog***. The image is posted to the server via OpenAPI protocol.
 
 ## How to run
 ### Wihhout Docker Image 
