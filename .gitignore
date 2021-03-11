@@ -1,0 +1,5 @@
+# Editor ignores
+.vscode
+
+# Python ignores
+__pycache__
