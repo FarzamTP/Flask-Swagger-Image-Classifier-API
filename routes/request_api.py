@@ -27,14 +27,17 @@ def get_target_image_url():
         else:
             url = data.get('image_url')
             r = requests.get(url)
-            image_dir = f"media/{str(url).split('/')[-1]}"
+            image_dir = os.path.join('/media', str(url).split('/')[-1])
+            
+            if not os.path.exists('/media'):
+                os.mkdir('/media')
+            
             if not os.path.exists(image_dir):
-                image = open(image_dir, "wb")
-                image.write(r.content)
-                image.close()
+                with open(image_dir, 'wb') as f:
+                    f.write(r.content)
                 status = 200
             else:
                 status = 201
-            class_name = predict_class(image_dir)
+            class_name = predict_class(os.path.join("..", image_dir))
             return jsonify({'class': class_name,
                             'status': status})
