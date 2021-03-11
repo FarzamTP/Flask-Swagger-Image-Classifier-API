@@ -3,3 +3,6 @@
 
 # Python ignores
 __pycache__
+
+# Media directory
+media/*

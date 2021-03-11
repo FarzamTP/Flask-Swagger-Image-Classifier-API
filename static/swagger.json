@@ -1,0 +1,71 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "description": "This is a sample example of OpenAPI based protocols to send an image's url, in order to get its label.",
+      "version": "1.0.0",
+      "title": "Flask-Swagger-Image-Classifier-API",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "servers": [
+      {
+        "url": "/"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Image Classification",
+        "description": "Example API for requesting and return posted images' urls"
+      }
+    ],
+    "paths": {
+      "/classify": {
+        "post": {
+          "tags": [
+            "Classify"
+          ],
+          "summary": "Sends an image's url to get its label",
+          "requestBody": {
+            "description": "Image Classification Post Object",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/classify_image"
+                }
+              }
+            }
+          },
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Images downloaded, and classified"
+            },
+            "201": {
+                "description": "Image already exists, and classified"
+            },
+            "400": {
+              "description": "Failed. Bad post data."
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "classify_image": {
+          "type": "object",
+          "properties": {
+            "image_url": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
+  
